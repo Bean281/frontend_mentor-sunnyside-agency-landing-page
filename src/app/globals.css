@@ -5,7 +5,7 @@
   --foreground: #171717;
 }
 
-:root {
+@theme inline {
  /* Mobile */
  --background-image-mobile-top-section: url("../public/images/mobile/image-header.jpg");
  
@@ -54,5 +54,4 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-barlow);
 }

@@ -13,7 +13,7 @@ export default function TopSection() {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
   return (
-    <div className="container-top-section h-screen">
+    <div className="container-top-section h-full">
       <div className="img-container relative">
         <Image
           src={imageHeaderMobile}
@@ -26,11 +26,11 @@ export default function TopSection() {
           className="hidden md:block"
         />
 
-        <div className="absolute top-20 w-full md:hidden lg:hidden">
+        <div className="absolute top-20 z-1 w-full md:hidden lg:hidden">
           {openModal && (
             <div className="container-navbar">
               <ul className="nav-ctn bg-neutral-white font-barlow text-neutral-grayish mx-10 flex h-80 flex-col items-center justify-between p-10 text-xl font-semibold">
-                <li className="hover:bg-primary-yellow hover:text-neutral-desaturated relative ml-5 px-4 py-1 hover:rounded-4xl hover:px-2.25 hover:font-bold hover:uppercase">
+                <li className="hover:bg-primary-yellow relative ml-5 px-4 py-1 hover:rounded-4xl hover:px-2.25 hover:font-bold hover:text-black hover:uppercase">
                   <Link href="/">About</Link>
                 </li>
                 <li className="hover:bg-primary-yellow hover:text-neutral-desaturated relative ml-5 px-4 py-1 hover:rounded-4xl hover:px-2.25 hover:font-bold hover:uppercase">
@@ -47,7 +47,7 @@ export default function TopSection() {
           )}
         </div>
 
-        <div className="nav-container absolute top-10 flex w-full items-center justify-between px-7">
+        <div className="nav-container absolute top-10 z-1 flex w-full items-center justify-between px-7">
           <div className="logo-ctn">
             <Image src={logoImage} alt="image-logo" className="logo" />
           </div>
@@ -62,26 +62,30 @@ export default function TopSection() {
               />
             </div>
 
-            <ul className="menu-nav font-barlow hidden gap-10 md:flex md:justify-between">
-              <li className="text-neutral-desaturated relative ml-5 px-4 py-1 hover:rounded-4xl hover:bg-amber-50 hover:px-2.25 hover:font-semibold hover:uppercase">
+            <ul className="menu-nav font-barlow lg:text-neutral-white hidden gap-10 md:flex md:justify-between">
+              <li className="hover:text-neutral-desaturated ml-5 px-4 py-1 hover:relative hover:rounded-4xl hover:bg-amber-50 hover:px-2.25 hover:font-semibold hover:uppercase">
                 <Link href="/">About</Link>
               </li>
-              <li className="text-neutral-desaturated relative ml-5 px-4 py-1 hover:rounded-4xl hover:bg-amber-50 hover:px-2.25 hover:font-semibold hover:uppercase">
+              <li className="hover:text-neutral-desaturated relative ml-5 px-4 py-1 hover:rounded-4xl hover:bg-amber-50 hover:px-2.25 hover:font-semibold hover:uppercase">
                 <Link href="/">Services</Link>
               </li>
-              <li className="text-neutral-desaturated relative ml-5 px-4 py-1 hover:rounded-4xl hover:bg-amber-50 hover:px-2.25 hover:font-semibold hover:uppercase">
+              <li className="hover:text-neutral-desaturated relative ml-5 px-4 py-1 hover:rounded-4xl hover:bg-amber-50 hover:px-2.25 hover:font-semibold hover:uppercase">
                 <Link href="/">Projects</Link>
               </li>
-              <li className="text-neutral-desaturated relative ml-5 px-4 py-1 hover:rounded-4xl hover:bg-amber-50 hover:px-2.25 hover:font-semibold hover:uppercase">
+              <li className="hover:text-neutral-desaturated relative ml-5 px-4 py-1 hover:rounded-4xl hover:bg-amber-50 hover:px-2.25 hover:font-semibold hover:uppercase">
                 <Link href="/">Contact</Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="title-top-section absolute top-0 w-screen h-screen flex flex-col gap-10 lg:gap-25 lg:justify-center items-center">
-          <p className="text-5xl text-center lg:text-6xl font-barlow mt-40 lg:mt-0">WE ARE CREATIVES</p>
-          <Image src={iconArrowDown} alt="arrow-down"/>
+        <div className="title-top-section absolute top-0 z-0 flex h-full w-full flex-col items-center gap-10 md:justify-center lg:gap-25 lg:pb-30">
+          <p className="font-fraunces font-bold mt-40 text-center text-5xl lg:mt-0 lg:text-6xl">
+            WE ARE CREATIVES
+          </p>
+          <div className="arrow-ctn w-8">
+            <Image src={iconArrowDown} alt="arrow-down" />
+          </div>
         </div>
       </div>
     </div>
