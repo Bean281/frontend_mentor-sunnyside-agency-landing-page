@@ -5,11 +5,43 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+ /* Mobile */
+ --background-image-mobile-top-section: url("../public/images/mobile/image-header.jpg");
+ 
+ /* --background-image-mobile-top-section: url("../public/images/background-mobile.png");
+ --background-image-mobile-top-section: url("../public/images/background-mobile.png");
+ --background-image-mobile-top-section: url("../public/images/background-mobile.png");
+ --background-image-mobile-top-section: url("../public/images/background-mobile.png");
+ --background-image-mobile-top-section: url("../public/images/background-mobile.png");
+ --background-image-mobile-top-section: url("../public/images/background-mobile.png"); */
+
+  /* Desktop */
+  --background-image-desktop-top-section: url("../public/images/desktop/image-header.jpg");
+
+
+
+
+
+  /* Primary */
+  --color-primary-soft-red: hsl(7, 99%, 70%);
+  --color-primary-yellow: hsl(51, 100%, 49%);
+  --color-primary-desaturated-graphic: hsl(167, 40%, 24%);
+  --color-primary-blue-photo: hsl(198, 62%, 26%);
+  --color-primary-moderate-footer: hsl(168, 34%, 41%);
+
+  /* Neutral */
+  --color-neutral-desaturated: hsl(212, 27%, 19%);
+  --color-neutral-very-grayish: hsl(213, 9%, 39%);
+  --color-neutral-grayish: hsl(232, 10%, 55%);
+  --color-neutral-grayish-blue: hsl(210, 4%, 67%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --font-fraunces: var(--font-geist-fraunces);
+  --font-barlow: var(--font-geist-barlow);
+
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +54,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-barlow);
 }
