@@ -40,8 +40,8 @@ export default function FeedbacksSection() {
         {feedBackData &&
           feedBackData.map((feedBackItem) => {
             return (
-              <>
-                <div className="feedback-item mb-10 flex flex-col items-center justify-center p-5 text-center" key={feedBackItem.id}>
+              <div className="big big"  key={feedBackItem.id}>
+                <div className="feedback-item mb-10 flex flex-col items-center justify-center p-5 text-center">
                   <div className="feedback-ava-ctn w-20 rounded-4xl">
                     <Image
                       src={feedBackItem.image}
@@ -65,7 +65,7 @@ export default function FeedbacksSection() {
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
       </div>
