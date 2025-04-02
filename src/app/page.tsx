@@ -1,3 +1,4 @@
+import BottomSection from "./bottom-section/page";
 import FeedbacksSection from "./feedbacks-section/page";
 import TopSection from "./top-section/page";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="container-landing-page w-full h-full">
       <TopSection/>
       <FeedbacksSection/>
+      <BottomSection/>
     </div>
   );
 }
